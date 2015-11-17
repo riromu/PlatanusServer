@@ -2,6 +2,7 @@ package es.upv.riromu.platanus.db;
 
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,7 +17,7 @@ public class PlatanusDAO {
     Connection con;
      
     public void save(Platanus declira) throws SQLException {
-        Connection con = DBUtil.getConnection();
+        Connection con = getConnection();
         String insert = "INSERT INTO platanus (" +
         		"indice, " +//null
         		"tipo," +//1
@@ -291,16 +292,17 @@ public List<Platanus> findAllMapCapturedImages(){
     	  
     }
     
- /*    
+ 
     public Connection getConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cropprotbdarbol?relaxAutoCommit=true", "cropprotbdarbol", "UnTupido2015");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cropprotbdarbol?relaxAutoCommit=true", "cropprotbdarbol", "dbpassword");
            // con.setAutoCommit(false);
         } catch (Exception e) {
             e.printStackTrace(); 
             System.out.println("errror"+e.getMessage());
         }
         return con;
-  }*/
- } 
+  
+ }
+}

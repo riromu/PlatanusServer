@@ -22,7 +22,8 @@ public class PlatanusController extends HttpServlet {
 
     private static String GENERATE = "/Generate";
     private static String ORDER = "/Order";
-   
+    private PlatanusDAO platanusDao;
+    private HistogramRelationDAO histogramRelationDao;
 
     public PlatanusController() {
         super();
@@ -54,20 +55,5 @@ public class PlatanusController extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-     /*xception e) {
-            e.printStackTrace();
-        }
-        user.setEmail(request.getParameter("email"));
-        String userid = request.getParameter("userid");
-        if(userid == null || userid.isEmpty())
-        {
-            dao.addUser(user);
-        }
-        else
-        {
-            user.setUserid(Integer.parseInt(userid));
-            dao.updateUser(user);
-        }
-        RequestDispatcher view = request.getRequestDispatcher(LIST_USER);
-        request.setAttribute("users", dao.get*/}
+    }
 }

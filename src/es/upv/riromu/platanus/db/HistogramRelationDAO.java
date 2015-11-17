@@ -119,7 +119,7 @@ public class HistogramRelationDAO {
     public Connection getConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cropprotbdarbol?relaxAutoCommit=true", "cropprotbdarbol", "UnTupido2015");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cropprotbdarbol?relaxAutoCommit=true", "cropprotbdarbol", "dbpassword");
            // con.setAutoCommit(false);
         } catch (Exception e) {
             e.printStackTrace(); 

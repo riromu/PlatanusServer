@@ -1,0 +1,4 @@
+driver=com.mysql.jdbc.Driver
+url=jdbc:mysql://localhost:3306/cropprotbdarbol?relaxAutoCommit=true
+user=cropprotbdarbol
+password=UnTupido2015
